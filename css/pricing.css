@@ -1,0 +1,147 @@
+/* LINES */
+.hr_black {
+  border-top: 1px solid #4f4d4d;
+}
+.hr_green {
+  border-top: 1px solid var(--cta-primary);
+}
+.hr_yellow {
+  border-top: 1px solid var(--cta-quaternary);
+}
+.hr_blue {
+  border-top: 1px solid var(--cta-secondary);
+}
+.hr_pink {
+  border-top: 1px solid var(--cta-tertiary);
+}
+.pricing_container {
+  background-color: var(--color-bg-secondary);
+  border-radius: 30px;
+  border: 2.5px solid var(--color-text-tertiary);
+  padding: 30px;
+
+  /* box-shadow-mobile */
+  box-shadow: 5px 5px 0 0 rgba(164, 156, 140, 0.7);
+}
+.pricing_container_div {
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+  background-color: none;
+}
+.pricing_container_div h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .pricing_grid1 {
+    display: flex;
+  }
+  .pricing_grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .flexbox_img {
+    display: flex;
+    align-self: flex-end;
+  }
+  .headline_pricing {
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+  }
+}
+
+/* GENERAL */
+body {
+  background-color: var(--color-bg-primary);
+}
+h1 {
+  color: var(--color-text-primary);
+
+  font-family: var(--font-primary);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+h3 {
+  color: var(--color-text-primary);
+  /* h3 */
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+p {
+  color: var(--color-text-primary);
+  /* p */
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.p_price {
+  font-weight: 700;
+}
+li {
+  color: var(--color-text-primary);
+  /* p */
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* FAQ */
+.faq-section2 {
+  display: grid;
+  grid-template-columns: min(100%, 65ch);
+  place-content: center;
+  gap: 2px;
+  gap: 30px;
+  padding: 30px;
+  background-color: var(--color-bg-secondary);
+}
+.faq-section1 {
+  border: solid 2.5px var(--color-text-tertiary);
+  border-radius: 30px;
+  box-shadow: 3px 2px 0 0 rgba(0, 0, 0, 0.4);
+  background-color: var(--color-bg-secondary);
+}
+details {
+  outline: 2.5px solid var(--color-text-tertiary);
+  border-radius: 30px;
+  background-color: var(--color-bg-secondary);
+}
+
+summary {
+  cursor: pointer;
+  padding: 1rem;
+  color: var(--color-text-primary);
+
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.content {
+  padding: 1rem;
+
+  p {
+    margin: 0;
+  }
+}
+.faq_img {
+  border-radius: 30px;
+}
