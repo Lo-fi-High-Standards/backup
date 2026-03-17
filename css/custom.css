@@ -1,0 +1,16 @@
+:root {
+  --color-bg-primary: #f3eee4;
+  --color-bg-secondary: #f9f7f4;
+
+  --color-text-primary: #000000;
+  --color-text-secondary: #f3eee4;
+  --color-text-tertiary: #292929;
+
+  --cta-primary: #548128;
+  --cta-secondary: #65a1f6;
+  --cta-tertiary: #f487ee;
+  --cta-quaternary: #fcba34;
+
+  --font-primary: "Unbounded", sans-serif;
+  --font-secondary: "Plus Jakarta Sans", sans-serif;
+}
