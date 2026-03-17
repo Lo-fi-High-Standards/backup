@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+header {
+  z-index: 1000;
+}
+
+nav {
+  margin-bottom: 0.3rem;
+}
 .header_flex {
   display: flex;
   flex-direction: row;
@@ -131,12 +138,14 @@ footer {
 
   nav.active .menu {
     display: block;
-    background-color: #ffffff;
+    background-color: var(--color-bg-secondary);
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: 0;
-    width: 100%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    border-radius: 30px;
+    box-shadow: var(--dropshadow-mobile);
+    border: solid var(--color-border) 2.5px;
     z-index: 1;
     padding: 2em 1.4em;
   }
