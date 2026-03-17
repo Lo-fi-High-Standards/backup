@@ -72,7 +72,7 @@ p {
   text-decoration: underline;
 }
 
-img {
+.card img {
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
@@ -127,7 +127,7 @@ img:hover {
 @media (min-width: 1024px) {
   #user {
     grid-template-columns: repeat(4, 1fr);
-    gap: 5rem;
+    gap: 3rem;
   }
 
   .companions {
@@ -173,7 +173,7 @@ img:hover {
   h2 {
     font-family: var(--font-primary);
     font-size: 1.5rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
   }
 
   h3 {
