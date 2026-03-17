@@ -6,6 +6,10 @@
   --color-text-secondary: #f3eee4;
   --color-text-tertiary: #292929;
 
+  --color-border: #4f4d4d;
+  --dropshadow-mobile: 3px 3px 0 0 rgba(164, 156, 140, 0.72);
+  --dropshadow-desktop: 10px 10px 0 0 rgba(164, 156, 140, 0.7);
+
   --cta-primary: #548128;
   --cta-secondary: #65a1f6;
   --cta-tertiary: #f487ee;
