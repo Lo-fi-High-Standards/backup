@@ -102,6 +102,7 @@ img:hover {
   width: 95px;
   height: 35px;
   border-radius: 30px;
+  color: var(--color-text-tertiary);
   border: 2.5px solid var(--color-border);
   background: #f3eee4;
   box-shadow: var(--dropshadow-mobile);
@@ -126,5 +127,60 @@ img:hover {
 @media (min-width: 1024px) {
   #user {
     grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+  }
+
+  .companions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main {
+    padding: 4rem;
+  }
+
+  .card {
+    padding: 1.4rem;
+    box-shadow: var(--dropshadow-desktop);
+  }
+
+  #filter button {
+    font-size: 1.25rem;
+    width: 110px;
+    height: 45px;
+  }
+
+  #filter {
+    display: flex;
+    justify-content: end;
+    gap: 0.6rem;
+  }
+
+  .seemore {
+    padding: 8px 20px 10px 20px;
+    margin-top: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    padding-left: 4rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  h2 {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  h3 {
+    font-family: var(--font-secondary);
+    font-size: 1.25rem;
+    margin-top: 0.8rem;
+    margin-left: 0.1rem;
+    font-weight: 400;
   }
 }
