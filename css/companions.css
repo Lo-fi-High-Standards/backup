@@ -99,7 +99,7 @@ img:hover {
 }
 
 #filter button {
-  width: 95px;
+  padding: 0 16px;
   height: 35px;
   border-radius: 30px;
   color: var(--color-text-tertiary);
@@ -133,10 +133,7 @@ img:hover {
   .companions {
     display: flex;
     justify-content: space-between;
-  }
-
-  main {
-    padding: 4rem;
+    align-items: start;
   }
 
   .card {
@@ -153,7 +150,6 @@ img:hover {
   #filter {
     display: flex;
     justify-content: end;
-    gap: 0.6rem;
   }
 
   .seemore {
@@ -165,7 +161,8 @@ img:hover {
     margin-bottom: 2rem;
     font-family: var(--font-primary);
     font-size: 4rem;
-    padding-left: 4rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
   }
