@@ -1,0 +1,86 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3eee4;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-family: var(--font-primary);
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+p,
+li {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+ul {
+  list-style: none;
+  padding: 0; /* fjerner også default indryk */
+  padding-bottom: 40px;
+}
+
+.listeTop {
+  padding-top: 12px;
+}
+
+/* SECTION SPACING */
+.whatIsBackup {
+  padding: 20px;
+}
+
+.group-image {
+  width: 100%;
+  max-width: 370px;
+  border-radius: 30px 30px 0 0;
+  display: block;
+  box-shadow: 5px 5px 0 rgba(164, 156, 140, 0.7);
+  margin: 0 auto;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 30px;
+  border-radius: 30px;
+  border: 3.5px solid #4f4d4d;
+  background: #f9f7f4;
+  box-shadow: 5px 5px 0 rgba(164, 156, 140, 0.7);
+
+  margin-top: -80px; /* card ligger sig ovenpå billedet*/
+  position: relative;
+  z-index: 2;
+}
+
+.about-card p {
+  margin-bottom: 15px;
+}
+
+.p_top {
+  padding-top: 12px;
+}
+
+.howItWorks_card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 30px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 3.5px solid #4f4d4d;
+  background: #f9f7f4;
+  box-shadow: 5px 5px 0 rgba(164, 156, 140, 0.7);
+}
