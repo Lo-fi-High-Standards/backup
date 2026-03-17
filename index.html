@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="js/index.js" defer></script>
   </head>
   <body>
@@ -14,18 +26,88 @@
       <div>
         <img
           class="logo"
-          src="assets/img/backuplogo.svg"
+          src="assets/backuplogo.svg"
           alt="logo"
           aria-describedby="go to landingpage"
         />
       </div>
-      <nav class="nav_flex">
-        <a href="about.html">about</a>
-        <a href="companions.html">companions</a>
-        <a href="pricing.html">pricing</a>
-        <a href="book.html">book</a>
+      <nav>
+        <div class="nav_flex">
+          <a href="about.html">about</a>
+          <div class="verticalline"></div>
+          <a href="companions.html">companions</a>
+          <div class="verticalline"></div>
+          <a href="pricing.html">pricing</a>
+          <div class="verticalline"></div>
+          <a href="book.html">book</a>
+        </div>
+
+        <div class="burgernav">
+          <button class="burger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <ul class="menu">
+            <li><a href="about.html">about</a></li>
+            <li><a href="companions.html">companions</a></li>
+
+            <li><a href="pricing.html">pricing</a></li>
+
+            <li>
+              <a href="book.html">book</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="hero">
+        <img
+          src="assets/img/heroimg.webp"
+          alt="a man and a woman dancing at wedding"
+        />
+
+        <article class="hero_flex">
+          <div>
+            <h1>Got an invitation, but no plus one?</h1>
+            <p class="hero_text">
+              Hire a trusted companion for weddings, parties or networking and
+              turn any event into a good story:
+            </p>
+          </div>
+          <a class="cta_button_pink" href="companions.html"
+            >explore companions</a
+          >
+        </article>
+      </section>
+
+      <section class="rollingbanner">
+        <p>get 15% off when rebooking - get 15% off when rebo</p>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <h4>Backup LLC</h4>
+        <ul>
+          <li>575 Lexington Avenue</li>
+          <li>Floor 14</li>
+          <li>New York, NY 100022</li>
+          <li>United States</li>
+        <li></li>
+        
+          +1 (212) 555-9146 <br />
+          contact@backup-services.com</li>
+        </ul>
+       
+      <div>
+        <ul class="ulbold">
+          <li><a href="">About us</a></li>
+          <li><a href="">Terms & Conditions</a></li>
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">Reviews</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
