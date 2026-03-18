@@ -9,7 +9,7 @@
   grid-template-rows: subgrid;
   grid-row: span 4;
   row-gap: 0;
-  padding: 0.9rem;
+  padding: 1rem;
   border-radius: 20px;
   border: 2.5px solid var(--color-border);
   background: #f9f7f4;
@@ -18,7 +18,8 @@
 
 h1 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
   font-family: var(--font-primary);
   font-size: 2rem;
 }
@@ -50,11 +51,11 @@ h3 {
 .rating {
   display: flex;
   gap: 2px;
-  margin-top: 0;
+  margin-top: 0.1rem;
 }
 
 p {
-  font-size: 0.4rem;
+  font-size: 0.6rem;
   font-weight: normal;
   font-family: var(--font-secondary);
   margin-left: 0.3rem;
@@ -66,26 +67,32 @@ p {
   object-fit: cover;
   border-radius: 20px;
   filter: grayscale(70%);
-  cursor: pointer;
 }
 
-.card img:hover {
-  filter: none;
+.card:hover {
+  cursor: pointer;
+  img {
+    filter: none;
+  }
 }
 
 .seemore {
   display: flex;
   align-self: center;
   justify-self: center;
-  padding: 5px 15px;
+  padding: 5px 15px 7px 15px;
   border-radius: 30px;
-  margin-top: 1rem;
+  margin-top: 1.8rem;
   border: 2.5px solid #4f4d4d;
   background: var(--cta-primary);
   color: var(--color-text-secondary);
   box-shadow: var(--dropshadow-mobile);
   font-family: var(--font-secondary);
   cursor: pointer;
+}
+
+.seemore:hover {
+  background-color: #6f9846;
 }
 
 #filter button {
@@ -104,19 +111,133 @@ p {
 #filter {
   display: flex;
   justify-content: center;
-  gap: 0.6rem;
+  gap: 0.8rem;
+  margin-bottom: 1.4rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 560px) {
   #user {
-    grid-template-columns: repeat(3, 1fr);
+    margin-right: 0.5rem;
+  }
+
+  .companions {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  h1 {
+    font-family: var(--font-primary);
+    font-size: 3.2rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 7rem 5rem 0rem 2.5rem;
+  }
+
+  #filter {
+    display: flex;
+    justify-content: end;
+    padding: 2.6rem 0rem;
+    margin-bottom: 0rem;
+  }
+
+  .card {
+    box-shadow: var(--dropshadow-desktop);
+    border-radius: 20px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 835px) {
+  #user {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+  }
+
+  .card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: grayscale(70%);
+    cursor: pointer;
+  }
+
+  .card {
+    box-shadow: var(--dropshadow-desktop);
+  }
+
+  .seemore {
+    padding: 8px 20px 10px 20px;
+    margin-top: 3rem;
+    font-size: 0.8rem;
+  }
+
+  svg {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  h1 {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    margin: 7.2rem 5rem 2rem 2.5rem;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-left: 0.1rem;
+  }
+
+  #filter {
+    display: flex;
+    justify-content: end;
+    padding: 2.6rem 0rem;
+    margin-bottom: 0rem;
+  }
+
+  p {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 1140px) {
   #user {
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    font-size: 1rem;
+    min-width: 319px;
+    gap: 2.5rem;
+  }
+
+  .seemore {
+    padding: 10px 20px 12px 20px;
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+
+  .companions {
+    display: flex;
+  }
+
+  h1 {
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin: 7.5rem 5rem 0rem 2.5rem;
+  }
+
+  #filter {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  #user {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
   }
   .companions {
     display: flex;
@@ -145,12 +266,27 @@ p {
     display: flex;
     justify-content: end;
     padding: 2.6rem 0rem;
+    margin-bottom: 0rem;
+  }
+
+  .city {
+    margin-bottom: 0rem;
+    margin-right: 0rem;
+  }
+
+  .map {
+    margin-bottom: 0.3rem;
   }
 
   .seemore {
     padding: 12px 30px 14px 30px;
-    margin-top: 3.5rem;
+    margin-top: 3rem;
     font-size: 1rem;
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
   }
 
   h1 {
@@ -158,13 +294,13 @@ p {
     font-size: 4rem;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    margin: 0rem 3.5rem;
+    margin: 8rem 5rem 0rem 2.5rem;
   }
 
   h2 {
     font-family: var(--font-primary);
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
   h3 {
