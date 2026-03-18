@@ -8,19 +8,72 @@ const idContainer = [
   180, 181, 188, 198, 206,
 ];
 
+let ageData = true;
+let genderData = true;
+let cityData = true;
+let nameData = true;
+let udsnit;
+
 document
-  .querySelectorAll("#filter button")
-  .forEach((knap) => knap.addEventListener("click", filter));
+  .querySelectorAll("#sorter button")
+  .forEach((knap) => knap.addEventListener("click", sorter));
 
 function getData() {
   fetch(endpoint)
-    .then((response) => response.json())
+    .then((res) => res.json())
     .then((data) => {
-      console.log(data.users);
-      data.users
-        .filter((user) => idContainer.includes(user.id)) //*includes = check if value exists//*
-        .forEach((user) => {
-          userContainer.innerHTML += `<article class="card">
+      allData = udsnit = data.users;
+      showId();
+    });
+}
+
+function sorter(event) {
+  const type = event.target.dataset.text;
+
+  if (type == "age") {
+    if (ageData) {
+      udsnit.sort((a, b) => a.age - b.age);
+    } else {
+      udsnit.sort((a, b) => b.age - a.age);
+    }
+    ageData = !ageData;
+  }
+
+  if (type == "gender") {
+    if (genderData) {
+      udsnit.sort((a, b) => b.gender.localeCompare(a.gender));
+    } else {
+      udsnit.sort((a, b) => a.gender.localeCompare(b.gender));
+    }
+    genderData = !genderData;
+  }
+
+  if (type == "city") {
+    if (cityData) {
+      udsnit.sort((a, b) => a.address.city.localeCompare(b.address.city));
+    } else {
+      udsnit.sort((a, b) => b.address.city.localeCompare(a.address.city));
+    }
+    cityData = !cityData;
+  }
+
+  if (type == "az") {
+    if (nameData) {
+      udsnit.sort((a, b) => a.firstName.localeCompare(b.firstName));
+    } else {
+      udsnit.sort((a, b) => b.firstName.localeCompare(a.firstName));
+    }
+    nameData = !nameData;
+  }
+  showId();
+}
+
+function showId() {
+  userContainer.innerHTML = "";
+  udsnit
+    .filter((user) => idContainer.includes(user.id))
+    .forEach((user) => {
+      userContainer.innerHTML += `<article class="card">
            <h2>${user.firstName}, ${user.age}</h2>
   <img src="assets/img/${user.id}.webp" alt="${user.firstName}">
   <div class=map>
@@ -39,7 +92,6 @@ function getData() {
 </div>
    <button class=seemore>see more</button>
    </article>`;
-        });
     });
 }
 
