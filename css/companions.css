@@ -1,26 +1,15 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f3eee4;
-}
-
 #user {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  padding: 0rem 1.2rem 0rem 1.2rem;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  row-gap: 0;
   padding: 0.9rem;
-  padding-bottom: 20px;
   border-radius: 20px;
   border: 2.5px solid var(--color-border);
   background: #f9f7f4;
@@ -50,8 +39,7 @@ h3 {
 
 .map {
   display: flex;
-  flex-direction: row;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .city {
@@ -61,7 +49,8 @@ h3 {
 
 .rating {
   display: flex;
-  margin-top: 0.2rem;
+  gap: 2px;
+  margin-top: 0;
 }
 
 p {
@@ -80,14 +69,15 @@ p {
   cursor: pointer;
 }
 
-img:hover {
+.card img:hover {
   filter: none;
 }
 
 .seemore {
   display: flex;
   align-self: center;
-  padding: 6px 15px 8px 15px;
+  justify-self: center;
+  padding: 5px 15px;
   border-radius: 30px;
   margin-top: 1rem;
   border: 2.5px solid #4f4d4d;
@@ -99,8 +89,6 @@ img:hover {
 }
 
 #filter button {
-  padding: 0 16px;
-  height: 35px;
   border-radius: 30px;
   color: var(--color-text-tertiary);
   border: 2.5px solid var(--color-border);
@@ -108,17 +96,18 @@ img:hover {
   box-shadow: var(--dropshadow-mobile);
   font-family: var(--font-secondary);
   font-size: 0.75rem;
+  min-width: 80px;
+  padding: 0.4rem 1rem;
   cursor: pointer;
 }
 
 #filter {
   display: flex;
   justify-content: center;
-  padding: 0rem 1.2rem 1.4375rem 1.2rem;
   gap: 0.6rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   #user {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -127,44 +116,49 @@ img:hover {
 @media (min-width: 1024px) {
   #user {
     grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
+    gap: 2rem;
   }
-
   .companions {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
+  }
+
+  .content {
+    flex: 1;
   }
 
   .card {
     padding: 1.4rem;
     box-shadow: var(--dropshadow-desktop);
+    border-radius: 30px;
+  }
+
+  .card img {
+    border-radius: 30px;
   }
 
   #filter button {
-    font-size: 1.25rem;
-    width: 110px;
+    font-size: 0.9rem;
     height: 45px;
   }
 
   #filter {
     display: flex;
     justify-content: end;
+    padding: 2.6rem 0rem;
   }
 
   .seemore {
-    padding: 8px 20px 10px 20px;
-    margin-top: 2rem;
+    padding: 12px 30px 14px 30px;
+    margin-top: 3.5rem;
+    font-size: 1rem;
   }
 
   h1 {
-    margin-bottom: 2rem;
     font-family: var(--font-primary);
     font-size: 4rem;
-    margin-left: 4rem;
-    margin-right: 4rem;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+    margin: 0rem 3.5rem;
   }
 
   h2 {
@@ -175,9 +169,13 @@ img:hover {
 
   h3 {
     font-family: var(--font-secondary);
-    font-size: 1.25rem;
-    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    margin-top: 0;
     margin-left: 0.1rem;
     font-weight: 400;
+  }
+
+  p {
+    font-size: 0.8rem;
   }
 }
