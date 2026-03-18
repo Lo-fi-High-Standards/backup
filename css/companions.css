@@ -62,15 +62,19 @@ p {
   text-decoration: underline;
 }
 
+.rating p {
+  cursor: pointer;
+}
+
 .card img {
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
   filter: grayscale(70%);
+  cursor: pointer;
 }
 
 .card:hover {
-  cursor: pointer;
   img {
     filter: none;
   }
@@ -95,7 +99,7 @@ p {
   background-color: #6f9846;
 }
 
-#filter button {
+#sorter button {
   border-radius: 30px;
   color: var(--color-text-tertiary);
   border: 2.5px solid var(--color-border);
@@ -108,7 +112,7 @@ p {
   cursor: pointer;
 }
 
-#filter {
+#sorter {
   display: flex;
   justify-content: center;
   gap: 0.8rem;
@@ -137,7 +141,7 @@ p {
     margin: 7rem 5rem 0rem 2.5rem;
   }
 
-  #filter {
+  #sorter {
     display: flex;
     justify-content: end;
     padding: 2.6rem 0rem;
@@ -161,8 +165,6 @@ p {
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
-    filter: grayscale(70%);
-    cursor: pointer;
   }
 
   .card {
@@ -191,7 +193,7 @@ p {
     margin-left: 0.1rem;
   }
 
-  #filter {
+  #sorter {
     display: flex;
     justify-content: end;
     padding: 2.6rem 0rem;
@@ -226,10 +228,10 @@ p {
     font-size: 4rem;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    margin: 7.5rem 5rem 0rem 2.5rem;
+    margin: 6rem 5rem 0rem 2.5rem;
   }
 
-  #filter {
+  #sorter {
     margin-bottom: 0rem;
   }
 }
@@ -257,12 +259,11 @@ p {
     border-radius: 30px;
   }
 
-  #filter button {
+  #sorter button {
     font-size: 0.9rem;
-    height: 45px;
   }
 
-  #filter {
+  #sorter {
     display: flex;
     justify-content: end;
     padding: 2.6rem 0rem;
@@ -294,7 +295,7 @@ p {
     font-size: 4rem;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    margin: 8rem 5rem 0rem 2.5rem;
+    margin: 9.2rem 5rem 0rem 2.5rem;
   }
 
   h2 {
