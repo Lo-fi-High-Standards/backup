@@ -47,6 +47,12 @@ h1 {
   font-size: 64px;
 }
 
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
 h2 {
   font-family: var(--font-primary);
   font-size: 32px;
@@ -280,6 +286,10 @@ summary {
 }
 
 @media (min-width: 801px) {
+  .header_flex {
+    box-shadow: var(--dropshadow-desktop);
+  }
+
   .nav_flex {
     display: flex;
     flex-direction: row;
@@ -303,6 +313,7 @@ summary {
     width: 2px;
     background-color: var(--color-text-primary);
   }
+
   .footer_flex {
     display: flex;
     flex-direction: row;
@@ -310,6 +321,9 @@ summary {
     padding: 1em 0;
   }
 
+  footer {
+    box-shadow: var(--dropshadow-desktop);
+  }
   .footer_line {
     display: none;
   }
@@ -334,10 +348,12 @@ summary {
   #faq_section1 {
     display: flex;
     flex-direction: row;
+    border-radius: 30px;
 
     img {
       /* max-width: 75%; */
       width: 60%;
+      box-shadow: var(--dropshadow-desktop);
     }
   }
   .faq_section2 {
@@ -345,7 +361,8 @@ summary {
     /* margin-left: -10rem; */
     gap: 2rem;
     transform: translateX(-50px);
-    min-width: 45%;
+    min-width: 44%;
+    box-shadow: var(--dropshadow-desktop);
 
     /* position: absolute; */
   }
