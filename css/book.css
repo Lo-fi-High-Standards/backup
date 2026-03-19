@@ -57,4 +57,37 @@ form {
 #form-section {
   display: grid;
   grid: 1fr;
+  margin: 0 auto;
+  color: var(--color-text-primary);
+  border-radius: 20px;
+  border: 2.5px solid var(--color-border);
+  box-shadow: var(--dropshadow-mobile);
+  padding: 1rem;
+  background-color: var(--color-bg-secondary);
+}
+
+label {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+}
+
+input {
+  background-color: var(--color-accent-primary);
+  opacity: var(--opacity-primary);
+  border-radius: 20px;
+}
+
+.btn_book {
+  display: block;
+  margin: 1.8rem auto 0 auto;
+  padding: 5px 15px 7px 15px;
+  border-radius: 30px;
+  margin-top: 1.8rem;
+  border: 2.5px solid #4f4d4d;
+
+  background: var(--cta-secondary);
+  color: var(--color-text-secondary);
+  box-shadow: var(--dropshadow-mobile);
+  font-family: var(--font-secondary);
+  cursor: pointer;
 }
