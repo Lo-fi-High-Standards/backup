@@ -1,16 +1,15 @@
 const landingContainer = document.querySelector("#users");
+const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav");
+
+burger.addEventListener("click", burgerClick);
+function burgerClick() {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+}
 
 if (landingContainer) {
   const landingId = new URLSearchParams(window.location.search).get("id");
-
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector("nav");
-
-  burger.addEventListener("click", burgerClick);
-  function burgerClick() {
-    burger.classList.toggle("active");
-    nav.classList.toggle("active");
-  }
 
   const endpointLanding = `https://dummyjson.com/users?limit=208`;
 
