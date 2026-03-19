@@ -72,6 +72,7 @@ p {
   border-radius: 20px;
   filter: grayscale(70%);
   cursor: pointer;
+  aspect-ratio: 4 / 3;
 }
 
 .card:hover {
