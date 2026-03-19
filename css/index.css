@@ -64,8 +64,39 @@
   border-radius: 30px;
   padding: 1.5rem 2rem;
   box-shadow: var(--dropshadow-mobile);
-  text-decoration: underline;
+
   margin-bottom: 2rem;
+}
+
+.marquee_text {
+  overflow: clip;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 2.5rem,
+    black calc(100% - 2.5rem),
+    transparent
+  );
+}
+
+.marquee-text-track {
+  display: flex;
+  padding-left: 4rem;
+  gap: 4rem;
+  width: max-content;
+  animation: marquee-move-text 18s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-text-track {
+    animation: none;
+  }
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @media (min-width: 801px) {
@@ -100,8 +131,8 @@
   .hero-p {
     padding: 1rem 0;
     font-size: 1.1rem;
-    max-width: 40ch;
     line-height: 1.8;
+    text-wrap: balance;
   }
 
   .rollingbanner {
