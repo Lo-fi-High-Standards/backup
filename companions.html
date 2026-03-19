@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
       rel="stylesheet"
     />
+    <script src="js/index.js" defer></script>
     <script src="js/companions.js" defer></script>
   </head>
   <body>
@@ -65,12 +66,16 @@
       <section class="companions">
         <h1>COMPANIONS</h1>
 
-        <div class="content">
+        <div class="content-button">
+          <div id="filter">
+            <button>all</button>
+            <button>female</button>
+            <button>male</button>
+          </div>
           <div id="sorter">
             <button data-text="age">age</button>
-            <button data-text="gender">gender</button>
             <button data-text="city">city</button>
-            <button data-text="az">a-z</button>
+            <button data-text="name">name</button>
           </div>
 
           <div id="user"></div>
