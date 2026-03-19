@@ -28,11 +28,20 @@ li {
   font-size: 12px;
   line-height: 1.4;
 }
-ul {
+
+/* ----------- order lister, hvor sidste linje har en indent på 15 px --------*/
+ol {
   list-style: none;
   padding: 0; /* fjerner også default indryk */
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
+
+.howItWorks_card ol {
+  padding-left: 15px;
+  text-indent: -15px;
+  line-height: 1.5;
+}
+/* ------------------------------------------------------------- */
 
 .listeTop {
   padding-top: 12px;
