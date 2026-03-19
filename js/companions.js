@@ -1,3 +1,6 @@
+const klikId = new URLSearchParams(window.location.search).get("users");
+console.log(klikId);
+
 const endpoint = `https://dummyjson.com/users?limit=208`;
 
 const userContainer = document.querySelector("#user");
@@ -13,10 +16,15 @@ let genderData = true;
 let cityData = true;
 let nameData = true;
 let udsnit;
+let allData;
 
 document
   .querySelectorAll("#sorter button")
   .forEach((knap) => knap.addEventListener("click", sorter));
+
+document
+  .querySelectorAll("#filter button")
+  .forEach((knap) => knap.addEventListener("click", filter));
 
 function getData() {
   fetch(endpoint)
@@ -39,15 +47,6 @@ function sorter(event) {
     ageData = !ageData;
   }
 
-  if (type == "gender") {
-    if (genderData) {
-      udsnit.sort((a, b) => b.gender.localeCompare(a.gender));
-    } else {
-      udsnit.sort((a, b) => a.gender.localeCompare(b.gender));
-    }
-    genderData = !genderData;
-  }
-
   if (type == "city") {
     if (cityData) {
       udsnit.sort((a, b) => a.address.city.localeCompare(b.address.city));
@@ -57,7 +56,7 @@ function sorter(event) {
     cityData = !cityData;
   }
 
-  if (type == "az") {
+  if (type == "name") {
     if (nameData) {
       udsnit.sort((a, b) => a.firstName.localeCompare(b.firstName));
     } else {
@@ -66,6 +65,16 @@ function sorter(event) {
     nameData = !nameData;
   }
   showId();
+}
+
+function filter(e) {
+  const valgt = e.target.textContent;
+  if (valgt == "all") {
+    udsnit = allData;
+  } else {
+    udsnit = allData.filter((user) => user.gender == valgt);
+  }
+  showId(udsnit);
 }
 
 function showId() {
