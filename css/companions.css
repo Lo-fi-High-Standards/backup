@@ -81,9 +81,8 @@ p {
 }
 
 .seemore {
-  display: flex;
-  align-self: center;
-  justify-self: center;
+  display: block;
+  margin: 1.8rem auto 0 auto;
   padding: 5px 15px 7px 15px;
   border-radius: 30px;
   margin-top: 1.8rem;
@@ -98,11 +97,6 @@ p {
 .seemore:hover {
   background-color: #6f9846;
   border: 2.5px solid rgba(164, 156, 140, 0.7);
-}
-
-.btn-wrap {
-  display: flex;
-  justify-content: center;
 }
 
 #sorter button,
@@ -122,6 +116,11 @@ p {
 
 #sorter button:hover,
 #filter button:hover {
+  border: 2.5px solid rgba(164, 156, 140, 0.7);
+}
+
+#sorter button:focus,
+#filter button:focus {
   border: 2.5px solid rgba(164, 156, 140, 0.7);
 }
 
