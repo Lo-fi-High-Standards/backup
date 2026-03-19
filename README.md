@@ -44,7 +44,7 @@ project/
 │   └── pricing.css
 │   └── profile.css
 ├── js/
-│   ├── idex.js
+│   ├── index.js
 │   ├── about.js
 │   ├── profile.js
 │   └── book.js
@@ -53,7 +53,7 @@ project/
 
 ### Filbeskrivelser
 
-- **index.html** – fordien
+- **index.html** – forsiden
 - **companions.html** – viser forskellige kort med data fra API'et
 - **profile.html** – viser detaljer, når man klikker ind på kort med data fra API'et
 - **about.html** – fortæller om konceptet
