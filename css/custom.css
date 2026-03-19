@@ -15,6 +15,14 @@
   --cta-tertiary: #f487ee;
   --cta-quaternary: #fcba34;
 
+  --color-accent-primary: #65a1f6;
+  --color-accent-secondary: #648840;
+  --color-accent-tertiary: #e30e12;
+
+  --opacity-primary: 0.15;
+  --opacity-secondary: 0.2;
+  --opacity-tertiary: 0.2;
+
   --font-primary: "Unbounded", sans-serif;
   --font-secondary: "Plus Jakarta Sans", sans-serif;
 }
