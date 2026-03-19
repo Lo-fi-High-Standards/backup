@@ -1,8 +1,7 @@
 const id = new URLSearchParams(window.location.search).get("id");
-const endpoint = `https://dummyjson.com/users?limit=208`;
+const endpoint = `https://dummyjson.com/users/${id}`;
 
 const userContainer = document.querySelector("#user");
-
 const idContainer = [
   1, 8, 10, 16, 20, 25, 29, 32, 33, 51, 56, 58, 59, 60, 65, 77, 78, 83, 85, 99,
   101, 102, 105, 120, 121, 123, 129, 131, 135, 143, 151, 156, 158, 159, 162,
@@ -12,12 +11,10 @@ const idContainer = [
 function getData() {
   fetch(endpoint)
     .then((response) => response.json())
-    .then((data) => {
-      console.log(data.users);
-      data.users
-        .filter((user) => idContainer.includes(user.id)) //*includes = check if value exists//*
-        .forEach((user) => {
-          userContainer.innerHTML += `<article class="card">
+    .then((user) => {
+      console.log(user);
+
+      userContainer.innerHTML = `<article class="card">
            <h2>${user.firstName}, ${user.age}</h2>
   <img src="assets/img/${user.id}.webp" alt="${user.firstName}">
   <div class=map>
@@ -83,7 +80,6 @@ function getData() {
         "
           />
 </section>`;
-        });
     });
 }
 
