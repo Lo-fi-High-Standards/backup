@@ -74,7 +74,7 @@ function filter(e) {
   } else {
     udsnit = allData.filter((user) => user.gender == valgt);
   }
-  showId(udsnit);
+  showId();
 }
 
 function showId() {
