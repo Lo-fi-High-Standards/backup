@@ -1,88 +1,89 @@
-const klikId = new URLSearchParams(window.location.search).get("users");
-console.log(klikId);
-
-const endpoint = `https://dummyjson.com/users?limit=208`;
-
 const userContainer = document.querySelector("#user");
 
-const idContainer = [
-  1, 8, 10, 16, 20, 25, 29, 32, 33, 51, 56, 58, 59, 60, 65, 77, 78, 83, 85, 99,
-  101, 102, 105, 120, 121, 123, 129, 131, 135, 143, 151, 156, 158, 159, 162,
-  180, 181, 188, 198, 206,
-];
+if (userContainer) {
+  const klikId = new URLSearchParams(window.location.search).get("users");
+  console.log(klikId);
 
-let ageData = true;
-let genderData = true;
-let cityData = true;
-let nameData = true;
-let udsnit;
-let allData;
+  const endpoint = `https://dummyjson.com/users?limit=208`;
 
-document
-  .querySelectorAll("#sorter button")
-  .forEach((knap) => knap.addEventListener("click", sorter));
+  const idContainer = [
+    1, 8, 10, 16, 20, 25, 29, 32, 33, 51, 56, 58, 59, 60, 65, 77, 78, 83, 85,
+    99, 101, 102, 105, 120, 121, 123, 129, 131, 135, 143, 151, 156, 158, 159,
+    162, 180, 181, 188, 198, 206,
+  ];
 
-document
-  .querySelectorAll("#filter button")
-  .forEach((knap) => knap.addEventListener("click", filter));
+  let ageData = true;
+  let genderData = true;
+  let cityData = true;
+  let nameData = true;
+  let udsnit;
+  let allData;
 
-function getData() {
-  fetch(endpoint)
-    .then((res) => res.json())
-    .then((data) => {
-      allData = udsnit = data.users;
-      showId();
-    });
-}
+  document
+    .querySelectorAll("#sorter button")
+    .forEach((knap) => knap.addEventListener("click", sorter));
 
-function sorter(event) {
-  const type = event.target.dataset.text;
+  document
+    .querySelectorAll("#filter button")
+    .forEach((knap) => knap.addEventListener("click", filter));
 
-  if (type == "age") {
-    if (ageData) {
-      udsnit.sort((a, b) => a.age - b.age);
-    } else {
-      udsnit.sort((a, b) => b.age - a.age);
+  function getData() {
+    fetch(endpoint)
+      .then((res) => res.json())
+      .then((data) => {
+        allData = udsnit = data.users;
+        showId();
+      });
+  }
+
+  function sorter(event) {
+    const type = event.target.dataset.text;
+
+    if (type == "age") {
+      if (ageData) {
+        udsnit.sort((a, b) => a.age - b.age);
+      } else {
+        udsnit.sort((a, b) => b.age - a.age);
+      }
+      ageData = !ageData;
     }
-    ageData = !ageData;
-  }
 
-  if (type == "city") {
-    if (cityData) {
-      udsnit.sort((a, b) => a.address.city.localeCompare(b.address.city));
-    } else {
-      udsnit.sort((a, b) => b.address.city.localeCompare(a.address.city));
+    if (type == "city") {
+      if (cityData) {
+        udsnit.sort((a, b) => a.address.city.localeCompare(b.address.city));
+      } else {
+        udsnit.sort((a, b) => b.address.city.localeCompare(a.address.city));
+      }
+      cityData = !cityData;
     }
-    cityData = !cityData;
-  }
 
-  if (type == "name") {
-    if (nameData) {
-      udsnit.sort((a, b) => a.firstName.localeCompare(b.firstName));
-    } else {
-      udsnit.sort((a, b) => b.firstName.localeCompare(a.firstName));
+    if (type == "name") {
+      if (nameData) {
+        udsnit.sort((a, b) => a.firstName.localeCompare(b.firstName));
+      } else {
+        udsnit.sort((a, b) => b.firstName.localeCompare(a.firstName));
+      }
+      nameData = !nameData;
     }
-    nameData = !nameData;
+    showId();
   }
-  showId();
-}
 
-function filter(e) {
-  const valgt = e.target.textContent;
-  if (valgt == "all") {
-    udsnit = allData;
-  } else {
-    udsnit = allData.filter((user) => user.gender == valgt);
+  function filter(e) {
+    const valgt = e.target.textContent;
+    if (valgt == "all") {
+      udsnit = allData;
+    } else {
+      udsnit = allData.filter((user) => user.gender == valgt);
+    }
+    showId();
   }
-  showId();
-}
 
-function showId() {
-  userContainer.innerHTML = "";
-  udsnit
-    .filter((user) => idContainer.includes(user.id))
-    .forEach((user) => {
-      userContainer.innerHTML += `<article class="card">
+  function showId() {
+    userContainer.innerHTML = "";
+    udsnit
+      .filter((user) => idContainer.includes(user.id))
+      .forEach((user) => {
+        userContainer.innerHTML += `<article class="card">
            <h2>${user.firstName}, ${user.age}</h2>
            <a href="profile.html?id=${user.id}">
   <img src="assets/img/${user.id}.webp" alt="${user.firstName}"></a>
@@ -98,13 +99,14 @@ function showId() {
   <path d="M10.9375 0L13.5194 7.9463H21.8746L15.1151 12.8574L17.697 20.8037L10.9375 15.8926L4.17797 20.8037L6.75988 12.8574L0.000349998 7.9463H8.35559L10.9375 0Z" fill="#FCBA34"/>
 </svg><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 22 21" fill="none">
   <path d="M10.9375 0L13.5194 7.9463H21.8746L15.1151 12.8574L17.697 20.8037L10.9375 15.8926L4.17797 20.8037L6.75988 12.8574L0.000349998 7.9463H8.35559L10.9375 0Z" fill="#FCBA34"/>
-</svg><p>(46 reviews)</p>
+</svg><p class=rate>(46 reviews)</p>
 </div>
 <a href="profile.html?id=${user.id}">
    <button class=seemore>see more</button>
    </a>
    </article>`;
-    });
-}
+      });
+  }
 
-getData();
+  getData();
+}
