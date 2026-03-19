@@ -26,13 +26,13 @@ h1 {
 
 h2 {
   font-family: var(--font-primary);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin-bottom: 0.8rem;
 }
 
 h3 {
   font-family: var(--font-secondary);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   margin-top: 0.8rem;
   margin-left: 0.1rem;
   font-weight: 400;
@@ -99,7 +99,9 @@ p {
   background-color: #6f9846;
 }
 
-#sorter button {
+#sorter button,
+#filter button {
+  margin-bottom: 0.8rem;
   border-radius: 30px;
   color: var(--color-text-tertiary);
   border: 2.5px solid var(--color-border);
@@ -108,52 +110,70 @@ p {
   font-family: var(--font-secondary);
   font-size: 0.75rem;
   min-width: 80px;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0rem;
   cursor: pointer;
+}
+
+#sorter button:hover,
+#filter button:hover {
+  border: 2.5px solid rgba(164, 156, 140, 0.7);
 }
 
 a {
   text-decoration: none;
 }
 
-#sorter {
+#sorter,
+#filter {
   display: flex;
   justify-content: center;
-  gap: 0.8rem;
-  margin-bottom: 1.4rem;
+  gap: 1.8rem;
+  margin-bottom: 0rem;
+}
+
+#sorter {
+  margin-bottom: 1rem;
+}
+
+#filter {
+  margin-top: 1.5rem;
 }
 
 @media (min-width: 560px) {
-  #user {
-    margin-right: 0.5rem;
-  }
-
   .companions {
     display: flex;
     align-items: flex-start;
   }
 
-  .content {
+  .content-button {
     flex: 1;
   }
 
   h1 {
     font-family: var(--font-primary);
-    font-size: 3.2rem;
+    font-size: 2.6rem;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    margin: 7rem 5rem 0rem 2.5rem;
+    margin: 8.4rem 2.5rem 0rem 1.5rem;
   }
 
-  #sorter {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #sorter,
+  #filter {
     display: flex;
     justify-content: end;
-    padding: 2.6rem 0rem;
     margin-bottom: 0rem;
   }
 
+  #sorter {
+    margin-bottom: 1rem;
+  }
+
   .card {
-    box-shadow: var(--dropshadow-desktop);
+    box-shadow: var(--dropshadow-mobile);
     border-radius: 20px;
   }
 }
@@ -189,18 +209,29 @@ a {
   h1 {
     font-family: var(--font-primary);
     font-size: 3rem;
+    margin: 8.3rem 5rem 0rem 2.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
   }
 
   h3 {
+    font-size: 1rem;
     margin-top: 0;
     margin-left: 0.1rem;
   }
 
-  #sorter {
+  #sorter,
+  #filter {
     display: flex;
     justify-content: end;
-    padding: 2.6rem 0rem;
+    flex-direction: row;
     margin-bottom: 0rem;
+  }
+
+  #sorter {
+    margin-bottom: 1.2rem;
   }
 
   p {
@@ -226,6 +257,10 @@ a {
     display: flex;
   }
 
+  h3 {
+    font-size: 1rem;
+  }
+
   h1 {
     font-family: var(--font-primary);
     font-size: 4rem;
@@ -234,7 +269,7 @@ a {
   }
 
   #sorter {
-    margin-bottom: 0rem;
+    margin-bottom: 1.2rem;
   }
 }
 
@@ -261,15 +296,15 @@ a {
     border-radius: 30px;
   }
 
-  #sorter button {
+  #sorter button,
+  #filter button {
     font-size: 0.9rem;
   }
 
-  #sorter {
+  #sorter #filter {
     display: flex;
     justify-content: end;
-    padding: 2.6rem 0rem;
-    margin-bottom: 0rem;
+    margin-bottom: 1.2rem;
   }
 
   .city {
@@ -297,6 +332,7 @@ a {
     font-size: 4rem;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+    margin: 8.5rem 5rem 0rem 2.5rem;
   }
 
   h2 {
