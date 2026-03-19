@@ -86,13 +86,13 @@ p {
   justify-self: center;
   padding: 5px 15px 7px 15px;
   border-radius: 30px;
-  margin-top: 1.8rem;
   border: 2.5px solid #4f4d4d;
   background: var(--cta-primary);
   color: var(--color-text-secondary);
   box-shadow: var(--dropshadow-mobile);
   font-family: var(--font-secondary);
   cursor: pointer;
+  margin: 1.8 auto 0 auto;
 }
 
 .seemore:hover {
