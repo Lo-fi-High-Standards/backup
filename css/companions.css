@@ -97,6 +97,7 @@ p {
 
 .seemore:hover {
   background-color: #6f9846;
+  border: 2.5px solid rgba(164, 156, 140, 0.7);
 }
 
 #sorter button,
