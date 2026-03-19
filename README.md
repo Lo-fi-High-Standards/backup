@@ -1,4 +1,4 @@
-# Teknisk dokumentation – [backup]
+# Teknisk dokumentation – backup
 
 ## Om projektet
 
@@ -14,10 +14,10 @@ Sitet består af flere sider, hvor brugeren kan:
 
 ## Links
 
-- GitHub repository: [indsæt link]
-- GitHub Pages: [indsæt link]
-- Figma: [indsæt link]
-- Trello: [indsæt link]
+- GitHub repository: https://github.com/Lo-fi-High-Standards/backup
+- GitHub Pages: https://lo-fi-high-standards.github.io/backup/
+- Figma: https://www.figma.com/design/1ZTOnBOrKk1LYN0q92WDmA/Tema-8--LoFi-High-Standard?m=auto&t=FYVAAIfckzNSNhI7-1
+- Trello: https://trello.com/b/qhID39fl/backup-lo-fi-high-standards
 
 ---
 
@@ -28,25 +28,37 @@ Projektet er opdelt i HTML, CSS og JavaScript-filer.
 ```
 project/
 ├── index.html
-├── recipelist.html
-├── recipedetails.html
-├── form.html
+├── companions.html
+│   └── profile.html
+├── about.html
+├── book.html
+├── pricing.html
+
+
 ├── css/
-│   └── style.css
+│   └── about.css
+│   └── companions.css
+│   └── custom.css
+│   └── general.css
+│   └── index.css
+│   └── pricing.css
+│   └── profile.css
 ├── js/
-│   ├── index.js
-│   ├── recipelist.js
-│   ├── recipedetails.js
-│   └── form.js
+│   ├── idex.js
+│   ├── about.js
+│   ├── profile.js
+│   └── book.js
 └── README.md
 ```
 
 ### Filbeskrivelser
 
-- **index.html** – forsiden
-- **recipelist.html** – viser en liste med data fra API'et
-- **recipedetails.html** – viser detaljer om en valgt opskrift
-- **form.html** – indeholder formularen
+- **index.html** – fordien
+- **companions.html** – viser forskellige kort med data fra API'et
+- **profile.html** – viser detaljer, når man klikker ind på kort med data fra API'et
+- **about.html** – fortæller om konceptet
+- **book.html** – indeholder formularen
+- **pricing.html** – fortæller om priserne
 - **style.css** – styrer designet
 - **JavaScript-filer** – styrer det dynamiske indhold på de forskellige sider
 
@@ -54,16 +66,15 @@ project/
 
 ## Hvordan koden fungerer
 
-Vi har opdelt JavaScript, så hver side har sin egen fil.
+Vi har opdelt JavaScript, så hver side, der skulle bruge det har sin egen fil. 
 
 ### index.js
 
-Bruges på forsiden.
-Her bliver indhold vist dynamisk, fx links eller kategorier.
+Bruges på alle sider. Indeholder burgermenu.
 
-### recipelist.js
+### companions.js
 
-Henter data fra Rest API'et og viser en liste med opskrifter på siden.
+Henter data fra Rest API'et og viser en liste med companions, som kan filtreres efter køn og sorteres efter alder, by, alfabetisk.
 
 **Flow:**
 
@@ -72,15 +83,15 @@ Henter data fra Rest API'et og viser en liste med opskrifter på siden.
 3. Data hentes fra Rest API
 4. Data bliver gennemgået med loop
 5. HTML bliver indsat i DOM'en
-6. Brugeren kan klikke på en opskrift
+6. Brugeren kan klikke på en companion
 
-### recipedetails.js
+### profile.js
 
-Bruges til detaljesiden. Den læser et id fra URL'en og henter derefter den rigtige opskrift fra Rest API'et.
+Bruges til detaljesiden. Den læser et id fra URL'en og henter derefter den rigtige companion-profil fra Rest API'et.
 
-Det gør det muligt at genbruge den samme HTML-side til mange opskrifter. I stedet for at lave én side per opskrift, bruger vi ét id i URL'en til at vise det rigtige indhold.
+Det gør det muligt at genbruge den samme HTML-side til mange companion-profiler. I stedet for at lave én side per companion, bruger vi ét id i URL'en til at vise det rigtige indhold.
 
-### form.js
+### book.js
 
 Styrer formularen og validering af inputfelter.
 
@@ -95,17 +106,17 @@ Vi har navngivet vores filer, variabler og funktioner så de så tydeligt som mu
 ### Eksempler på variabler
 
 ```javascript
-const recipeContainer;
-const recipeId;
-const selectedCategory;
+const userContainer;
+const idContainer;
+let ageData;
 ```
 
 ### Eksempler på funktioner
 
 ```javascript
-fetchRecipes();
-showRecipes();
-showRecipeDetails();
+getData();
+sorter();
+burgerClick();
 validateForm();
 ```
 
@@ -121,15 +132,11 @@ Fx ved funktioner, fetch-kald og steder hvor der sker DOM-manipulation.
 **Eksempel:**
 
 ```javascript
-// Henter opskrifter fra Rest API'et
-async function fetchRecipes() {
-  const res = await fetch(apiURL);
-  const data = await res.json();
-  return data.recipes;
-}
+ .filter((user) => idContainer.includes(user.id)) //*includes = check if value exists//*
+
 ```
 
-Vi har prøvet ikke at skrive kommentarer til helt åbenlyse ting, men kun dér hvor det hjælper forståelsen.
+Vi har prøvet ikke at skrive kommentarer til helt åbenlyse ting, men kun dér hvor det hjælper forståelsen. I vores cssfiler har vi brugt det til bedre at kunne overskue hvor forskellige elementers styling ligger, da vi genbruger flere elementer på siderne.
 
 ---
 
@@ -142,24 +149,38 @@ Vi henter data fra et API i JSON-format.
 ```json
 {
   "id": 1,
-  "title": "Opskriftsnavn",
-  "description": "Kort beskrivelse",
-  "category": "dessert",
-  "cookTime": 45,
-  "servings": 4,
-  "thumbnail": "billede.jpg"
-}
+  "firstName": "Emily",
+  "lastName": "Johnson",
+  "maidenName": "Smith",
+  "age": 28,
+  "gender": "female",
+  "email": "emily.johnson@x.dummyjson.com",
+  "phone": "+81 965-431-3024",
+  "username": "emilys",
+  "password": "emilyspass",
+  "birthDate": "1996-5-30",
+  "image": "...",
+  "bloodGroup": "O-",
+  "height": 193.24,
+  "weight": 63.16,
+  "eyeColor": "Green",
+  "hair": {
+    "color": "Brown",
+    "type": "Curly"
+  }
 ```
 
 ### Felter vi bruger
 
-- **id** – bruges til at sende brugeren videre til detaljesiden
-- **title** – opskriftsnavn
-- **description** – beskrivelse af opskriften
-- **category** – opskriftkategori (fx dessert, hovedret, forret)
-- **cookTime** – tilberedningstid i minutter
-- **servings** – antal portioner
-- **thumbnail** – opskriftsbillede
+- **name** – companion navn
+- **age** – alder på companion
+- **city** - til at vise hvor companionen befinder sig
+- **id** – bruges til at sende brugeren videre til detaljesiden, vi har desuden tilknyttet billeder til id'er, så den loader billedet når det specifikke id vælges - dette gjorde vi da der kun fandtes ikoner i API'et.
+- **gender** – til at vise kønnet på companions, men også til at filtrere efter
+- **height** - til at vise højden på companions
+- **title** – jobtitel på companion
+- **hair** – til at vise hvilken type hår companionen har
+
 
 ---
 
@@ -183,18 +204,19 @@ Vi har brugt GitHub til at samarbejde om projektet.
 
 Vi har arbejdet med branches, så vi ikke sad og ændrede i det samme på samme tid.
 
-Vi navngav branchene med feature først og navnet på den, der lavede branchen til sidst.
+Vi navngav branches alt efter hvilke elementer/funktioner der blev lavet.
+
 
 ### Eksempler på branches
 
-- `feature-forside-steen`
-- `feature-opskriftsliste-peter`
-- `feature-detaljeside-karsten`
-- `feature-formular-pia`
+- `about-desktop`
+- `companions-filter-json`
+- `header-styling`
+- `custom-img`
 
 ### Workflow
 
-1. Lave en branch med feature-navn og eget navn til sidst
+1. Lave en branch
 2. Kode en feature
 3. Committe ændringer
 4. Pushe til GitHub
@@ -212,8 +234,8 @@ Vi har tænkt bæredygtighed ind i projektet ved at holde page weight under 250 
 
 - Ingen videoer
 - Ingen tunge frameworks
-- Genbruge af kode
-- Optimerede billeder
+- Genbruge kode så meget som muligt
+- Optimerede billeder i webp
 
 ---
 
