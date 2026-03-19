@@ -29,11 +29,11 @@ li {
   line-height: 1.4;
 }
 
-/* ----------- order lister, hvor sidste linje har en indent på 15 px --------*/
+/* ----------- order list, hvor sidste linje har en indent på 15 px --------*/
 ol {
   list-style: none;
   padding: 0; /* fjerner også default indryk */
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .howItWorks_card ol {
@@ -49,7 +49,8 @@ ol {
 
 /* SECTION SPACING */
 .whatIsBackup {
-  padding: 20px;
+  /* padding: 20px; */
+  margin-bottom: 20px;
 }
 
 .group-image {
@@ -69,7 +70,6 @@ ol {
   border: 3.5px solid #4f4d4d;
   background: #f9f7f4;
   box-shadow: 5px 5px 0 rgba(164, 156, 140, 0.7);
-
   margin-top: -80px; /* card ligger sig ovenpå billedet*/
   position: relative;
   z-index: 2;
@@ -87,9 +87,9 @@ ol {
   display: flex;
   flex-direction: column;
   padding: 20px 20px 30px;
-  margin: 20px;
   border-radius: 30px;
   border: 3.5px solid #4f4d4d;
   background: #f9f7f4;
   box-shadow: 5px 5px 0 rgba(164, 156, 140, 0.7);
+  margin-bottom: 40px;
 }
