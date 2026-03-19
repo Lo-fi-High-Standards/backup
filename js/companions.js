@@ -84,7 +84,7 @@ function showId() {
     .forEach((user) => {
       userContainer.innerHTML += `<article class="card">
            <h2>${user.firstName}, ${user.age}</h2>
-           <a href="profile.html">
+           <a href="profile.html?=${user.id}">
   <img src="assets/img/${user.id}.webp" alt="${user.firstName}"></a>
   <div class=map>
   <svg class="city" xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 18 22" fill="none">
@@ -100,8 +100,7 @@ function showId() {
   <path d="M10.9375 0L13.5194 7.9463H21.8746L15.1151 12.8574L17.697 20.8037L10.9375 15.8926L4.17797 20.8037L6.75988 12.8574L0.000349998 7.9463H8.35559L10.9375 0Z" fill="#FCBA34"/>
 </svg><p>(46 reviews)</p>
 </div>
-<div class="btn-wrap">
-<a href="profile.html">
+<a href="profile.html?id=${user.id}">
    <button class=seemore>see more</button>
    </a>
    </div>
