@@ -99,6 +99,10 @@ footer {
   }
 }
 
+.flex_footer_links {
+  padding-left: 2em;
+}
+
 .ulbold {
   padding: 2em 0.5em;
 }
@@ -125,10 +129,11 @@ footer {
 
 .address {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 1em;
   margin-bottom: 2em;
-  padding: 2em 0.5em;
+  padding: 2em 2em;
 }
 
 /* -----------------------FAQ -----------------------*/
@@ -319,22 +324,36 @@ summary {
   .footer_flex {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     padding: 1em 0;
   }
 
   footer {
     box-shadow: var(--dropshadow-desktop);
   }
+
   .footer_line {
     display: none;
+  }
+
+  .flex_footer_links {
+    flex: 1;
+  }
+
+  .address {
+    padding-left: 3em;
+  }
+
+  .footer_spacing {
+    display: flex;
+    justify-content: center;
+    margin-right: 3em;
   }
 
   .footer_vertical {
     display: block;
     width: 2.5px;
+    height: 100%;
     background-color: var(--color-text-primary);
-    margin: 2em 0;
   }
 
   .ulbold {
