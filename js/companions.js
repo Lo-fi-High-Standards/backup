@@ -100,9 +100,11 @@ function showId() {
   <path d="M10.9375 0L13.5194 7.9463H21.8746L15.1151 12.8574L17.697 20.8037L10.9375 15.8926L4.17797 20.8037L6.75988 12.8574L0.000349998 7.9463H8.35559L10.9375 0Z" fill="#FCBA34"/>
 </svg><p>(46 reviews)</p>
 </div>
+<div class="btn-wrap">
 <a href="profile.html">
    <button class=seemore>see more</button>
    </a>
+   </div>
    </article>`;
     });
 }
