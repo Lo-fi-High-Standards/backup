@@ -68,90 +68,117 @@
       </nav>
     </header>
     <main>
-      <h1>BOOKING</h1>
+      <div class="main_flex">
+        <h1>BOOKING</h1>
 
-      <section id="form-section">
-        <article id="form-subheader">
-          <br />
-          <h4>personal information</h4>
-          <br />
-          <br />
-        </article>
-
-        <form id="webform">
-          <div class="form-group-kontakt">
-            <label for="first_name">Name</label>
-            <input type="text" id="firstname_id" name="first_name" required />
-            <p class="error-message">Please enter a value</p>
-          </div>
-
-          <div class="form-group-kontakt">
-            <label for="surname_id">Surname</label>
-            <input type="text" id="surname_id" name="surname_id" required />
-            <p class="error-message">Please enter a value</p>
-          </div>
-
-          <div class="form-group-kontakt">
-            <label for="email_id">Email</label>
-            <input type="email" id="email_id" name="email_id" required />
-            <p class="error-message">Please enter a value</p>
-          </div>
-
-          <div class="form-group-kontakt">
-            <label for="number_id">Mobile</label>
-            <input type="number" id="number_id" name="number_id" required />
-            <p class="error-message">Please enter a value</p>
-          </div>
-
-          <article id="form-subheader">
-            <h4>companion information</h4>
-            <br />
+        <section class="form-section">
+          <article class="form-subheader">
+            <h4>personal information</h4>
           </article>
 
-          <div class="form-group-kontakt">
-            <label for="companion_name">Companion name</label>
-            <input type="text" id="companion_id" name="companion_id" required />
-            <p class="error-message">Please enter name</p>
-          </div>
+          <form id="webform">
+            <div class="flex_form_mb">
+              <div class="form-group-kontakt">
+                <label for="first_name">Name</label>
+                <input
+                  type="text"
+                  id="firstname_id"
+                  name="first_name"
+                  required
+                />
+                <p class="error-message">Please enter a value</p>
+              </div>
 
-          <div class="form-group-kontakt">
-            <label for="companion_number_id">Companion id</label>
-            <input
-              type="number"
-              id="companion_number_id"
-              name="companion_number_id"
-              required
-            />
-            <p class="error-message">Please enter id</p>
-          </div>
+              <div class="form-group-kontakt">
+                <label for="surname_id">Surname</label>
+                <input type="text" id="surname_id" name="surname_id" required />
+                <p class="error-message">Please enter a value</p>
+              </div>
 
-          <div class="form-group-kontakt">
-            <label for="date_id">Date</label>
-            <input type="number" id="date_id" name="date_id" required />
-            <p class="error-message">Please enter a date</p>
-          </div>
+              <div class="form-group-kontakt">
+                <label for="email_id">Email</label>
+                <input type="email" id="email_id" name="email_id" required />
+                <p class="error-message">Please enter a value</p>
+              </div>
 
-          <div class="form-group-kontakt">
-            <label for="activity_id">Describe activity</label>
-            <input type="text" id="activity_id" name="activity_id" required />
-            <p class="error-message">
-              Please describe your activity for the companion
-            </p>
-          </div>
+              <div class="form-group-kontakt">
+                <label for="number_id">Mobile</label>
+                <input type="number" id="number_id" name="number_id" required />
+                <p class="error-message">Please enter a value</p>
+              </div>
+            </div>
+            <div>
+              <article class="form-subheader">
+                <h4 class="comp-info">companion information</h4>
+              </article>
+              <div class="flex_form_mb">
+                <div class="form-group-kontakt">
+                  <label for="companion_name">Companion name</label>
+                  <input
+                    type="text"
+                    id="companion_id"
+                    name="companion_id"
+                    required
+                  />
+                  <p class="error-message">Please enter name</p>
+                </div>
 
-          <br />
-          <label for="terms">
-            <input type="checkbox" id="terms" name="accept_terms" value="yes" />
-            I agree to the Terms & Condition
-            <br />
-            <input type="checkbox" id="terms" name="accept_terms" value="yes" />
-            I have read and accept the Privacy Policy
-          </label>
-          <br />
+                <div class="form-group-kontakt">
+                  <label for="companion_number_id">Companion id</label>
+                  <input
+                    type="number"
+                    id="companion_number_id"
+                    name="companion_number_id"
+                    required
+                  />
+                  <p class="error-message">Please enter id</p>
+                </div>
 
-          <button class="btn_book" type="submit">submit</button>
-        </form>
-      </section>
+                <div class="form-group-kontakt">
+                  <label for="date_id">Date</label>
+                  <input type="number" id="date_id" name="date_id" required />
+                  <p class="error-message">Please enter a date</p>
+                </div>
+
+                <div class="form-group-kontakt">
+                  <label for="activity_id">Describe activity</label>
+                  <input
+                    type="text"
+                    id="activity_id"
+                    name="activity_id"
+                    required
+                  />
+                  <p class="error-message">
+                    Please describe your activity for the companion
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex_checkboxes_mb">
+              <label for="terms">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  name="accept_terms"
+                  value="yes"
+                />
+                I agree to the Terms & Condition
+              </label>
+              <label for="privacy">
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  name="accept_privacy"
+                  value="yes"
+                />
+                I have read and accept the Privacy Policy
+              </label>
+            </div>
+
+            <button class="btn_book" type="submit">submit</button>
+          </form>
+        </section>
+      </div>
 
       <!--  SPYT UD FORM  -->
       <br />
@@ -315,7 +342,9 @@
           </ul>
         </div>
         <span class="footer_line"></span>
-        <div class="footer_vertical"></div>
+        <div class="footer_spacing">
+          <div class="footer_vertical"></div>
+        </div>
         <div class="flex_footer_links">
           <ul class="ulbold">
             <li><a href="">About us</a></li>

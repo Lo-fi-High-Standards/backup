@@ -43,10 +43,6 @@ h3 {
   font-weight: 400;
 }
 
-.mf {
-  font-size: 1.5rem;
-}
-
 .map {
   display: flex;
   align-items: flex-end;
@@ -122,14 +118,8 @@ a {
   background: var(--cta-tertiary);
   padding: 1.2rem 2.5rem;
   border: solid var(--color-border) 2.5px;
-  box-shadow: var(--dropshadow-mobile);
   border-radius: 30px;
   max-width: fit-content;
-}
-
-.cta_button_pink:hover {
-  background-color: #f89ff5;
-  border: 2.5px solid rgba(164, 156, 140, 0.7);
 }
 
 .cta_flex_1 {
@@ -165,12 +155,6 @@ a {
 }
 
 /* hero unit  */
-
-.faq_headline {
-  font-size: 1.5rem;
-  font-family: var(--font-primary);
-  font-weight: 700;
-}
 
 .rollingbanner {
   background: var(--cta-quaternary);
@@ -225,7 +209,6 @@ a {
 
   h3 {
     font-size: 1rem;
-    font-weight: 700;
   }
 
   svg {
@@ -288,16 +271,12 @@ a {
   .rollingbanner {
     box-shadow: var(--dropshadow-desktop);
   }
-
-  .mf {
-    font-size: 1.6rem;
-  }
 }
 
 @media (min-width: 835px) {
   #users {
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.8rem;
+    gap: 2rem;
   }
 
   .card img {
