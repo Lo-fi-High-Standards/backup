@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>backup | booking</title>
+    <meta name="robots" content="noindex" />
+
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/book.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/index.js" defer></script>
+    <script src="js/booking.js" defer></script>
+  </head>
+  <body>
+    <header class="header_flex">
+      <div>
+        <a href="index.html">
+          <img
+            class="logo"
+            src="assets/backuplogo.svg"
+            alt="logo"
+            aria-describedby="go to landingpage"
+        /></a>
+      </div>
+      <nav>
+        <div class="nav_flex">
+          <a href="about.html">about</a>
+          <div class="verticalline"></div>
+          <a href="companions.html">companions</a>
+          <div class="verticalline"></div>
+          <a href="pricing.html">pricing</a>
+          <div class="verticalline"></div>
+          <a href="book.html">book</a>
+        </div>
+
+        <div class="burgernav">
+          <button class="burger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <ul class="menu">
+            <li><a href="about.html">about</a></li>
+            <li><a href="companions.html">companions</a></li>
+
+            <li><a href="pricing.html">pricing</a></li>
+
+            <li>
+              <a href="book.html">book</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>BOOKING</h1>
+
+      <section id="form-section">
+        <article id="form-subheader">
+          <br />
+          <h4>personal information</h4>
+          <br />
+          <br />
+        </article>
+
+        <form id="webform">
+          <div class="form-group-kontakt">
+            <label for="first_name">Name</label>
+            <input type="text" id="firstname_id" name="first_name" required />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <div class="form-group-kontakt">
+            <label for="surname_id">Surname</label>
+            <input type="text" id="surname_id" name="surname_id" required />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <div class="form-group-kontakt">
+            <label for="email_id">Email</label>
+            <input type="email" id="email_id" name="email_id" required />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <div class="form-group-kontakt">
+            <label for="number_id">Mobile</label>
+            <input type="number" id="number_id" name="number_id" required />
+            <p class="error-message">Please enter a value</p>
+          </div>
+
+          <article id="form-subheader">
+            <h4>companion information</h4>
+            <br />
+          </article>
+
+          <div class="form-group-kontakt">
+            <label for="companion_name">Companion name</label>
+            <input type="text" id="companion_id" name="companion_id" required />
+            <p class="error-message">Please enter name</p>
+          </div>
+
+          <div class="form-group-kontakt">
+            <label for="companion_number_id">Companion id</label>
+            <input
+              type="number"
+              id="companion_number_id"
+              name="companion_number_id"
+              required
+            />
+            <p class="error-message">Please enter id</p>
+          </div>
+
+          <div class="form-group-kontakt">
+            <label for="date_id">Date</label>
+            <input type="number" id="date_id" name="date_id" required />
+            <p class="error-message">Please enter a date</p>
+          </div>
+
+          <div class="form-group-kontakt">
+            <label for="activity_id">Describe activity</label>
+            <input type="text" id="activity_id" name="activity_id" required />
+            <p class="error-message">
+              Please describe your activity for the companion
+            </p>
+          </div>
+
+          <br />
+          <label for="terms">
+            <input type="checkbox" id="terms" name="accept_terms" value="yes" />
+            I agree to the Terms & Condition
+            <input type="checkbox" id="terms" name="accept_terms" value="yes" />
+            I have read and accept the Privacy Policy
+          </label>
+          <br />
+
+          <button type="submit">submit</button>
+        </form>
+      </section>
+
+      <!--  SPYT UD FORM  -->
+      <br />
+      <section id="form-summary">
+        <h2>Recap</h2>
+        <br />
+        <article>
+          <p class="placeholder">Your request:</p>
+          <br />
+
+          <div>Navn: <span id="first_name_output">....</span></div>
+          <div>Surname: <span id="surname_id_output">....</span></div>
+          <div>Email: <span id="email_id_output">....</span></div>
+          <div>Number: <span id="number_id_output">....</span></div>
+          <div>Companion: <span id="companion_id_output">....</span></div>
+          <div>ID-number: <span id="companion_num_id_output">....</span></div>
+          <div>Date: <span id="date_id_output">....</span></div>
+          <div>Activity: <span id="activity_id_output">....</span></div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
