@@ -84,7 +84,7 @@ function showId() {
     .forEach((user) => {
       userContainer.innerHTML += `<article class="card">
            <h2>${user.firstName}, ${user.age}</h2>
-           <a href="profile.html?=${user.id}">
+           <a href="profile.html?id=${user.id}">
   <img src="assets/img/${user.id}.webp" alt="${user.firstName}"></a>
   <div class=map>
   <svg class="city" xmlns="http://www.w3.org/2000/svg" width="9" height="11" viewBox="0 0 18 22" fill="none">
@@ -103,7 +103,6 @@ function showId() {
 <a href="profile.html?id=${user.id}">
    <button class=seemore>see more</button>
    </a>
-   </div>
    </article>`;
     });
 }
