@@ -88,7 +88,7 @@ footer {
     font-family: var(--font-secondary);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     list-style: none;
   }
 }
@@ -185,54 +185,6 @@ summary {
 }
 
 /* -----------------------FAQ -----------------------*/
-
-@media (min-width: 801px) {
-  .footer_flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1em 0;
-  }
-
-  .footer_line {
-    display: none;
-  }
-
-  .footer_vertical {
-    display: block;
-    width: 2.5px;
-    background-color: var(--color-text-primary);
-    margin: 2em 0;
-  }
-
-  .ulbold li {
-    display: flex;
-    flex-direction: row;
-  }
-
-  #faq_section1 {
-    display: flex;
-    flex-direction: row;
-
-    img {
-      /* max-width: 75%; */
-      width: 60%;
-    }
-  }
-  .faq_section2 {
-    z-index: 3;
-    /* margin-left: -10rem; */
-    gap: 2rem;
-    transform: translateX(-50px);
-    min-width: 45%;
-
-    /* position: absolute; */
-  }
-  .faq_img {
-    border-radius: 30px;
-    /* position: relative; */
-  }
-}
 
 /* burgermenu */
 
@@ -333,6 +285,10 @@ summary {
     flex-direction: row;
     gap: 1.8rem;
     padding-right: 2em;
+
+    a {
+      font-weight: 500;
+    }
   }
   .burgernav {
     display: none;
@@ -341,13 +297,69 @@ summary {
   body {
     margin: 1.5rem 2.5rem;
   }
+
+  .verticalline {
+    display: block;
+    width: 2px;
+    background-color: var(--color-text-primary);
+  }
+  .footer_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1em 0;
+  }
+
+  .footer_line {
+    display: none;
+  }
+
+  .footer_vertical {
+    display: block;
+    width: 2.5px;
+    background-color: var(--color-text-primary);
+    margin: 2em 0;
+  }
+
+  .ulbold {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    li {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  #faq_section1 {
+    display: flex;
+    flex-direction: row;
+
+    img {
+      /* max-width: 75%; */
+      width: 60%;
+    }
+  }
+  .faq_section2 {
+    z-index: 3;
+    /* margin-left: -10rem; */
+    gap: 2rem;
+    transform: translateX(-50px);
+    min-width: 45%;
+
+    /* position: absolute; */
+  }
+  .faq_img {
+    border-radius: 30px;
+    /* position: relative; */
+  }
 }
 
 @media (min-width: 900px) {
   .nav_flex {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 2.5rem;
     padding-right: 2em;
 
     a {
