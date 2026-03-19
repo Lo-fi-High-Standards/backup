@@ -7,6 +7,7 @@
     <!-- CSS LINK -->
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/pricing.css" />
+    <link rel="stylesheet" href="css/general.css" />
     <!-- FONT LINKS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,17 +21,57 @@
       href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
       rel="stylesheet"
     />
+    <!-- JAVASCRIPT -->
+    <script src="js/index.js" defer></script>
   </head>
   <body>
-    <header></header>
+    <header class="header_flex">
+      <div>
+        <a href="index.html">
+          <img
+            class="logo"
+            src="assets/backuplogo.svg"
+            alt="logo"
+            aria-describedby="go to landingpage"
+        /></a>
+      </div>
+      <nav>
+        <div class="nav_flex">
+          <a href="about.html">about</a>
+          <div class="verticalline"></div>
+          <a href="companions.html">companions</a>
+          <div class="verticalline"></div>
+          <a href="pricing.html">pricing</a>
+          <div class="verticalline"></div>
+          <a href="book.html">book</a>
+        </div>
 
+        <div class="burgernav">
+          <button class="burger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+          <ul class="menu">
+            <li><a href="about.html">about</a></li>
+            <li><a href="companions.html">companions</a></li>
+
+            <li><a href="pricing.html">pricing</a></li>
+
+            <li>
+              <a href="book.html">book</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <main>
       <section class="pricing_grid1">
         <div>
           <h1 class="headline_pricing">PRICING</h1>
         </div>
         <section class="pricing_container">
-          <h3>companion</h3>
+          <h3 class="pricingh3">companion</h3>
           <hr
             class="hr_black"
             width="100%"
@@ -93,7 +134,7 @@
           </div>
         </section>
         <section class="pricing_container">
-          <h3>extras</h3>
+          <h3 class="pricingh3">extras</h3>
           <hr
             class="hr_black"
             width="100%"
@@ -243,7 +284,7 @@
           <img src="assets/img_pricing.svg" alt="" />
         </div>
       </section>
-      <section id="faq_section1" class="pricing_grid2">
+      <section id="faq_section1">
         <img class="faq_img" src="assets/img/faq.webp" alt="" />
 
         <div class="faq_section2">
@@ -368,6 +409,30 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer_flex">
+        <div class="address">
+          <h4>Backup LLC</h4>
+          <ul class="footer_ul">
+            <li>575 Lexington Avenue</li>
+            <li>Floor 14</li>
+            <li>New York, NY 100022</li>
+            <li>United States</li>
+            <li>
+              +1 (212) 555-9146 <br />
+              contact@backup-services.com
+            </li>
+          </ul>
+        </div>
+        <span class="footer_line"></span>
+        <div class="footer_vertical"></div>
+        <ul class="ulbold">
+          <li><a href="">About us</a></li>
+          <li><a href="">Terms & Conditions</a></li>
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">Reviews</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
