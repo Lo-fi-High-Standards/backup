@@ -14,11 +14,22 @@
 .hr_pink {
   border-top: 1px solid var(--cta-tertiary);
 }
+.pricingh3 {
+  padding-bottom: 30px;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+.p_price {
+  font-weight: 700;
+}
 .pricing_container {
   background-color: var(--color-bg-secondary);
   border-radius: 30px;
-  border: 2.5px solid var(--color-text-tertiary);
+  border: 2.5px solid var(--color-border);
   padding: 30px;
+  margin-bottom: 100px;
 
   /* box-shadow-mobile */
   box-shadow: 5px 5px 0 0 rgba(164, 156, 140, 0.7);
@@ -27,6 +38,7 @@
   display: flex;
   justify-content: space-between;
   min-width: 400px;
+  padding: 18px;
 }
 
 img {
@@ -38,125 +50,35 @@ img {
   align-items: center;
   justify-content: center;
 }
-
+.pricing_text {
+  width: 100%;
+}
+.pricing_text h3 {
+  margin-top: 50px;
+}
+.pricing_text hr {
+  margin-bottom: 20px;
+}
 /* DESKTOP */
 @media (min-width: 1024px) {
   .pricing_grid1 {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    margin-right: 100px;
   }
   .pricing_grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+    gap: 50px;
   }
   .flexbox_img {
     display: flex;
-    align-self: flex-end;
+    align-self: center;
   }
   .headline_pricing {
     transform: rotate(180deg);
     writing-mode: vertical-rl;
+    text-align: left;
   }
-  .faq_section2 {
-    z-index: 0;
-    margin-top: 0;
-  }
-  .faq_img {
-    border-radius: 30px;
-    position: relative;
-    z-index: 2;
-    margin-right: -80px;
-  }
-}
-
-/* GENERAL */
-body {
-  background-color: var(--color-bg-primary);
-}
-h1 {
-  color: var(--color-text-primary);
-
-  font-family: var(--font-primary);
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-align: center;
-}
-h3 {
-  color: var(--color-text-primary);
-  /* h3 */
-  font-family: var(--font-primary);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-p {
-  color: var(--color-text-primary);
-  /* p */
-  font-family: var(--font-secondary);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.p_price {
-  font-weight: 700;
-}
-li {
-  color: var(--color-text-primary);
-  /* p */
-  font-family: var(--font-secondary);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-/* FAQ */
-.faq_section2 {
-  display: grid;
-  grid-template-columns: min(100%, 65ch);
-  place-content: center;
-  gap: 7px;
-  border-radius: 30px;
-  border: 2.5px solid #4f4d4d;
-  background: #f9f7f4;
-  box-shadow: 3px 2px 0 0 rgba(0, 0, 0, 0.4);
-  position: relative;
-  z-index: 2;
-  margin-top: -80px;
-}
-#faq_section1 {
-  border-radius: 30px;
-  box-shadow: 3px 2px 0 0 rgba(0, 0, 0, 0.4);
-  background-color: var(--color-bg-secondary);
-}
-details {
-  outline: 2.5px solid var(--color-text-tertiary);
-  border-radius: 30px;
-  background-color: var(--color-bg-secondary);
-  box-shadow: 3px 2px 0 0 rgba(0, 0, 0, 0.4);
-}
-
-summary {
-  cursor: pointer;
-  padding: 2rem;
-  color: var(--color-text-primary);
-  font-family: var(--font-secondary);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-}
-
-.content {
-  padding: 1rem;
-
-  p {
-    margin: 0;
-  }
-}
-.faq_img {
-  border-radius: 30px;
 }

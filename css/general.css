@@ -44,28 +44,35 @@ nav {
 
 h1 {
   font-family: var(--font-primary);
+  font-size: 64px;
 }
 
 h2 {
   font-family: var(--font-primary);
+  font-size: 32px;
 }
 
 h3 {
   font-family: var(--font-primary);
+  font-size: 24px;
 }
 
 h4 {
   font-family: var(--font-primary);
+  font-size: 16px;
 }
 
 p {
   font-family: var(--font-secondary);
+  font-size: 16px;
 }
 
 a {
   font-family: var(--font-secondary);
 }
-
+li {
+  font-family: var(--font-secondary);
+}
 body {
   margin: 1.5rem 1rem;
   background: var(--color-bg-primary);
