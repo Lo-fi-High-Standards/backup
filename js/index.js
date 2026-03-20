@@ -10,6 +10,7 @@ function burgerClick() {
 
 if (landingContainer) {
   const landingId = new URLSearchParams(window.location.search).get("id");
+  console.log(landingId);
 
   const endpointLanding = `https://dummyjson.com/users?limit=208`;
 

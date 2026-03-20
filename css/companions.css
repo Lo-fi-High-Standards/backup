@@ -188,7 +188,6 @@ a {
   #user {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 1400px;
   }
 
   .card img {

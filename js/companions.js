@@ -13,7 +13,6 @@ if (userContainer) {
   ];
 
   let ageData = true;
-  let genderData = true;
   let cityData = true;
   let nameData = true;
   let udsnit;
