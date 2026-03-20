@@ -120,6 +120,12 @@ ol {
 
 /* ------------------------- */
 
+@media (max-width: 768px) {
+  .group-image {
+    display: none;
+  }
+}
+
 @media (min-width: 1024px) {
   .whatIsBackup {
     display: flex;
